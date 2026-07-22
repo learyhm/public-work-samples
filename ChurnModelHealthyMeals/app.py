@@ -63,13 +63,13 @@ income_level = st.radio(
 
 education = st.radio(
     "Education",
-    ["Graduate", "High School", "Other", "Post-Graduate"],
+    ["High School", "Other", "Graduate", "Post-Graduate"],
     index=0
 )
 
 device_type = st.radio(
     "Device Type",
-    ["Desktop-only", "Mobile-only", "Multi-device"],
+    ["Multi-device", "Mobile-only", "Desktop-only"],
     index=2
 )
 
@@ -156,9 +156,8 @@ if st.button("Predict"):
         "NUMACTIVEQUARTERS2022": num_active_quarters,
         "AVGSESSIONSPERQUARTER": avg_sessions_per_quarter,
         "ACTIVEQ4": int(active_q4),
-        "AVG_SESSION_LENGTH": avg_session_length,
-        "ENGAGEMENT_TREND": engagement_trend,
-        "SESSION_FREQUENCY": session_frequency,
+        "AGE": age,
+        "TECH_COMFORT_SCORE": tech_comfort_score,
         "MINDFULLIVINGSUBSCRIPTION": int(mindful_living_subscription),
         "MINDFULLIVINGRENEW": int(mindful_living_renew),
         "PREMIUMHEALTHSUBSCRIPTION": int(premium_health_subscription),
@@ -168,8 +167,9 @@ if st.button("Predict"):
         "DAILYFITNESSSUBSCRIPTION": int(daily_fitness_subscription),
         "DAILYFITNESSRENEW": int(daily_fitness_renew),
         "PRIORRENEWALS": prior_renewals,
-        "AGE": age,
-        "TECH_COMFORT_SCORE": tech_comfort_score
+        "AVG_SESSION_LENGTH": avg_session_length,
+        "ENGAGEMENT_TREND": engagement_trend,
+        "SESSION_FREQUENCY": session_frequency,
     }])
 
     # -----------------------------------------------------------
